@@ -1,0 +1,17 @@
+body {
+	background-color: #fee9e1;
+}
+
+h1 {
+	padding-top: 5em;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	color: #b09e99;
+}
+
+#description {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: #b09e99;
+}
