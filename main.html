@@ -2,22 +2,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Go</title>
+        <title>NAME</title>
 
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300" rel="stylesheet">
     </head>
     <body>
-        <div id="wrapper">
-            <h1>Welcome to "NAME"</h1>
-            <center>
-                <p id ="description">BLAH BLAH DESCRIPTION"</p>
-                <a href="https://www.w3schools.com">
-                <img border="0" alt="W3Schools" src="img/start-icon.png" width="100" height="100">
-
-            </center>
-
-         </div>
+        <div id="header-bar"></div>
+        <div id="text-description">
+            <h3>How Much is Your House Worth?</h2>
+            Get a quick or in-depth estimate for your home's value
+        </div>
+        <div id="classifier-selection-wrapper">
+            <div class="classifier-selection" id="quick-classifier">
+                <div id="quick-classifier-image"></div>
+                <div id="quick-classifier-info">
+                    5 minutes or less<br /> 
+                    Only small amount of data needed<br /> 
+                    Semi-accurate evaluation<br /> 
+                </div>
+                <div class="classifier-selection-button">Quick Evaluation</div>
+            </div>
+            <div class="classifier-selection" id="detailed-classifier">
+                <div id="detailed-classifier-image"></div>
+                <div id="detailed-classifier-info">
+                    Approximately 10 minutes<br /> 
+                    Takes comprehensive data about your home<br /> 
+                    Most accurate evauluation<br /> 
+                </div>
+                <div class="classifier-selection-button">In-Depth Evaluation</div>
+            </div>
+        </div>
     </body>
 
 </html>
