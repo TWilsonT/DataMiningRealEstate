@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/index.css') }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -13,10 +13,10 @@
 
       <div class="mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Quick Estimate</h2>
+          <h2 class="mdl-card__title-text">Quick Estimate</a></h2>
         </div>
         <div class="mdl-card__supporting-text ">BLAH BLAH BLAH</div>
-        <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-card__actions mdl-card--border"; onclick="window.location='quick-start'">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Get Started
           </a>
@@ -31,7 +31,7 @@
           <h2 class="mdl-card__title-text">Detailed Estimate</h2>
         </div>
         <div class="mdl-card__supporting-text ">BLAH BLAH BLAH</div>
-        <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-card__actions mdl-card--border"; onclick="window.location='detailed-start'">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Get Started
           </a>
