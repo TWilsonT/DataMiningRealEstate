@@ -1,11 +1,10 @@
-#!flask/bin/python
-
 import sys
 
 from flask import Flask, render_template, request, redirect, Response
 import random, json
 
 app = Flask(__name__)
+
 
 @app.route('/index')
 def index():
@@ -21,6 +20,11 @@ def quickStart():
 def detailedStart():
     # serve index template
     return render_template('detailed-start.html')
+
+@app.route('/final-estimate')
+def finalEstimate():
+    # serve index template
+    return render_template('final-estimate.html', value=homeValue)
 
 
 @app.route('/receiver', methods = ['POST'])
