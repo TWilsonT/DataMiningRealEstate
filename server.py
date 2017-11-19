@@ -5,6 +5,8 @@ import random, json
 
 app = Flask(__name__)
 
+def getFinalValue():
+    return 65;
 
 @app.route('/index')
 def index():
@@ -24,7 +26,7 @@ def detailedStart():
 @app.route('/final-estimate')
 def finalEstimate():
     # serve index template
-    return render_template('final-estimate.html', value=homeValue)
+    return render_template('final-estimate.html', value=getFinalValue())
 
 
 @app.route('/receiver', methods = ['POST'])
@@ -37,6 +39,7 @@ def worker():
         # loop over every row
         result += str(item['make']) + '\n'
 
+    print (result)
     return result
 
 if __name__ == '__main__':
