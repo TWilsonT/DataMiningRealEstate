@@ -39,7 +39,8 @@ def worker():
     data = request.get_json()
     result = ''
 
-    print(data)
+    for d in data:
+        print(d)
 
     return result
 
