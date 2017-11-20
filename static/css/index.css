@@ -41,5 +41,30 @@ html {
 }
 .mdl-card__title {
 	height: 80%;
-	background-color: #D30C7B;
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#left-title-image {
+	width: 80%;
+	height: 100%;
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-image: url('/static/img/house-one.png');
+}
+
+#left-title {
+	background-color: #B38CB4;
+}
+
+#right-title-image {
+	width: 80%;
+	height: 100%;
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-image: url('/static/img/house-two.png');
+}
+
+#right-title {
+	background-color: #A15E49;
 }

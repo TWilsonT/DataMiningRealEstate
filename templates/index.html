@@ -8,11 +8,17 @@
 </head>
 <body>
   <div id="wrapper">
-    <div id="nav-header"></div>
+    <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+    </div>
+  </header>
     <div class="card-wrapper" id="left-card-wrapper">
 
       <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
+        <div class="mdl-card__title" id="left-title">
+          <div id="left-title-image"></div>
           <h2 class="mdl-card__title-text">Quick Estimate</a></h2>
         </div>
         <div class="mdl-card__supporting-text ">BLAH BLAH BLAH</div>
@@ -27,7 +33,8 @@
     <div class="card-wrapper" id="right-card-wrapper">
 
       <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
+        <div class="mdl-card__title" id="right-title">
+          <div id="right-title-image"></div>
           <h2 class="mdl-card__title-text">Detailed Estimate</h2>
         </div>
         <div class="mdl-card__supporting-text ">BLAH BLAH BLAH</div>

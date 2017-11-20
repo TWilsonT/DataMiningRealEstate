@@ -5,8 +5,12 @@ import random, json
 
 app = Flask(__name__)
 
+#
+#   FUNCTIONS TO TRAIN MODEL AND GET FINAL VALUES ETC
+#
 def getFinalValue():
     return 65;
+######
 
 @app.route('/index')
 def index():
@@ -35,13 +39,15 @@ def worker():
     data = request.get_json()
     result = ''
 
-    for item in data:
-        # loop over every row
-        result += str(item['make']) + '\n'
+    print(data)
 
-    print (result)
     return result
 
 if __name__ == '__main__':
+    #
+    #   TRAIN THE MODEL RIGHT HERE
+    #
+
+
     # run!
     app.run()
