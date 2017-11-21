@@ -1,82 +1,86 @@
 // define the mappings from categories to integers
+
+categories = ['', '1.5Fin', '1.5Unf', '1Fam', '1Story', '2.5Fin', '2.5Unf', '2Story', '2Types', '2fmCon', 'A', 'ALQ', 'Abnorml', 'AdjLand', 'AllPub', 'Alloca', 'Artery', 'AsbShng', 'AsphShn', 'Attchd', 'Av', 'BLQ', 'Basment', 'Blmngtn', 'Blueste', 'Bnk', 'BrDale', 'Brk Cmn', 'BrkCmn', 'BrkComm', 'BrkFace', 'BrkSide', 'BrkTil', 'BuiltIn', 'C', 'CBlock', 'COD', 'CWD', 'CarPort', 'CemntBd', 'ClearCr', 'ClyTile', 'CmentBd', 'CollgCr', 'CompShg', 'Con', 'ConLD', 'ConLI', 'ConLw', 'Corner', 'Crawfor', 'CulDSac', 'Detchd', 'Duplex', 'Edwards', 'Elev', 'Ex', 'FR2', 'FR3', 'FV', 'Fa', 'Family', 'Feedr', 'Fin', 'Flat', 'Floor', 'FuseA', 'FuseF', 'FuseP', 'GLQ', 'Gable', 'Gambrel', 'Gar2', 'GasA', 'GasW', 'Gd', 'GdPrv', 'GdWo', 'Gilbert', 'Grav', 'Greens', 'GrnHill', 'Grvl', 'Gtl', 'HLS', 'HdBoard', 'Hip', 'I', 'IDOTRR', 'IR1', 'IR2', 'IR3', 'ImStucc', 'Inside', 'Landmrk', 'Low', 'Lvl', 'LwQ', 'Maj1', 'Maj2', 'Mansard', 'MeadowV', 'Membran', 'Metal', 'MetalSd', 'Min1', 'Min2', 'Mitchel', 'Mix', 'Mn', 'MnPrv', 'MnWw', 'Mod', 'N', 'NA', 'NAmes', 'NPkVill', 'NWAmes', 'New', 'No', 'NoRidge', 'NoSeWa', 'NoSewr', 'None', 'Norm', 'Normal', 'NridgHt', 'OldTown', 'Oth', 'OthW', 'Other', 'Othr', 'P', 'PConc', 'Partial', 'Pave', 'Plywood', 'Po', 'PosA', 'PosN', 'PreCast', 'RFn', 'RH', 'RL', 'RM', 'RRAe', 'RRAn', 'RRNe', 'RRNn', 'Rec', 'Reg', 'Roll', 'SBrkr', 'SFoyer', 'SLvl', 'SWISU', 'Sal', 'Sawyer', 'SawyerW', 'Sev', 'Shed', 'Slab', 'Somerst', 'Stone', 'StoneBr', 'Stucco', 'TA', 'Tar&Grv', 'TenC', 'Timber', 'Twnhs', 'TwnhsE', 'Typ', 'Unf', 'VWD', 'Veenker', 'VinylSd', 'WD ', 'Wall', 'Wd Sdng', 'Wd Shng', 'WdShake', 'WdShing', 'WdShngl', 'Wood', 'Y']
+
+console.log(categories.indexOf("2fmCon"))
 var MSZoningMappings = {};
-MSZoningMappings["Agriculture"] = "A";
-MSZoningMappings["Commercial"] = "C";
-MSZoningMappings["Floating Village Residential"] = "FV";
-MSZoningMappings["Industrial"] = "I";
-MSZoningMappings["Residential High Density"] = "RH";
-MSZoningMappings["Residential Low Density"] = "RL";
-MSZoningMappings["Residential Low Density Park"] = "RP";
-MSZoningMappings["Residential Medium Density"] = "RM";
+MSZoningMappings["Agriculture"] = categories.indexOf("A");
+MSZoningMappings["Commercial"] = categories.indexOf("C");
+MSZoningMappings["Floating Village Residential"] = categories.indexOf("FV");
+MSZoningMappings["Industrial"] = categories.indexOf("I");
+MSZoningMappings["Residential High Density"] = categories.indexOf("RH");
+MSZoningMappings["Residential Low Density"] = categories.indexOf("RL");
+MSZoningMappings["Residential Low Density Park"] = categories.indexOf("RP");
+MSZoningMappings["Residential Medium Density"] = categories.indexOf("RM");
 
 var StreetMappings = {};
-StreetMappings["Gravel"] = "Grvl";
-StreetMappings["Paved"] = "Pave";
+StreetMappings["Gravel"] = categories.indexOf("Grvl");
+StreetMappings["Paved"] = categories.indexOf("Pave");
 
 var LandContourMappings = {};
-LandContourMappings["Near Flat/Level"] = "Lvl";
-LandContourMappings["Banked"] = "Bnk";
-LandContourMappings["Hillside"] = "HLS";
-LandContourMappings["Depression"] = "Low";
+LandContourMappings["Near Flat/Level"] = categories.indexOf("Lvl");
+LandContourMappings["Banked"] = categories.indexOf("Bnk");
+LandContourMappings["Hillside"] = categories.indexOf("HLS");
+LandContourMappings["Depression"] = categories.indexOf("Low");
 
 var NeighborhoodMappings = {};
-NeighborhoodMappings["Bloomington Heights"] = "Blmngtn";
-NeighborhoodMappings["Bluestem"] = "Blueste";
-NeighborhoodMappings["Briardale"] = "BrDale";
-NeighborhoodMappings["Brookside"] = "BrkSide";
-NeighborhoodMappings["Clear Creek"] = "ClearCr";
-NeighborhoodMappings["College Creek"] = "CollgCr";
-NeighborhoodMappings["Crawford"] = "Crawfor";
-NeighborhoodMappings["Edwards"] = "Edwards";
-NeighborhoodMappings["Gilbert"] = "Gilbert";
-NeighborhoodMappings["Iowa DOT and Rail Road"] = "IDOTRR";
-NeighborhoodMappings["Meadow Village"] = "MeadowV";
-NeighborhoodMappings["Mitchell"] = "Mitchel";
-NeighborhoodMappings["North Ames"] = "Names";
-NeighborhoodMappings["Northridge"] = "NoRidge";
-NeighborhoodMappings["Northpark Villa"] = "NPkVill";
-NeighborhoodMappings["Northridge Heights"] = "NridgHt";
-NeighborhoodMappings["Northwest Ames"] = "NWAmes";
-NeighborhoodMappings["Old Town"] = "OldTown";
-NeighborhoodMappings["South & West of Iowa State University"] = "SWISU";
-NeighborhoodMappings["Sawyer"] = "Sawyer";
-NeighborhoodMappings["Sawyer West"] = "SawyerW";
-NeighborhoodMappings["Somerset"] = "Somerst";
-NeighborhoodMappings["Stone Brook"] = "StoneBr";
-NeighborhoodMappings["Timberland"] = "Timber";
-NeighborhoodMappings["Veenker"] = "Veenker";
+NeighborhoodMappings["Bloomington Heights"] = categories.indexOf("Blmngtn");
+NeighborhoodMappings["Bluestem"] = categories.indexOf("Blueste");
+NeighborhoodMappings["Briardale"] = categories.indexOf("BrDale");
+NeighborhoodMappings["Brookside"] = categories.indexOf("BrkSide");
+NeighborhoodMappings["Clear Creek"] = categories.indexOf("ClearCr");
+NeighborhoodMappings["College Creek"] = categories.indexOf("CollgCr");
+NeighborhoodMappings["Crawford"] = categories.indexOf("Crawfor");
+NeighborhoodMappings["Edwards"] = categories.indexOf("Edwards");
+NeighborhoodMappings["Gilbert"] = categories.indexOf("Gilbert");
+NeighborhoodMappings["Iowa DOT and Rail Road"] = categories.indexOf("IDOTRR");
+NeighborhoodMappings["Meadow Village"] = categories.indexOf("MeadowV");
+NeighborhoodMappings["Mitchell"] = categories.indexOf("Mitchel");
+NeighborhoodMappings["North Ames"] = categories.indexOf("Names");
+NeighborhoodMappings["Northridge"] = categories.indexOf("NoRidge");
+NeighborhoodMappings["Northpark Villa"] = categories.indexOf("NPkVill");
+NeighborhoodMappings["Northridge Heights"] = categories.indexOf("NridgHt");
+NeighborhoodMappings["Northwest Ames"] = categories.indexOf("NWAmes");
+NeighborhoodMappings["Old Town"] = categories.indexOf("OldTown");
+NeighborhoodMappings["South & West of Iowa State University"] = categories.indexOf("SWISU");
+NeighborhoodMappings["Sawyer"] = categories.indexOf("Sawyer");
+NeighborhoodMappings["Sawyer West"] = categories.indexOf("SawyerW");
+NeighborhoodMappings["Somerset"] = categories.indexOf("Somerst");
+NeighborhoodMappings["Stone Brook"] = categories.indexOf("StoneBr");
+NeighborhoodMappings["Timberland"] = categories.indexOf("Timber");
+NeighborhoodMappings["Veenker"] = categories.indexOf("Veenker");
 
 var BldgTypeMappings = {};
-BldgTypeMappings["Single-family Detached"] = "1Fam";
-BldgTypeMappings["Two-family Conversion"] = "2FmCon";
-BldgTypeMappings["Duplex"] = "Duplx";
-BldgTypeMappings["Townhouse End Unit"] = "TwnhsE";
-BldgTypeMappings["Townhouse Inside Unit"] = "TwnhsI";
+BldgTypeMappings["Single-family Detached"] = categories.indexOf("1Fam");
+BldgTypeMappings["Two-family Conversion"] = categories.indexOf("2FmCon");
+BldgTypeMappings["Duplex"] = categories.indexOf("Duplx");
+BldgTypeMappings["Townhouse End Unit"] = categories.indexOf("TwnhsE");
+BldgTypeMappings["Townhouse Inside Unit"] = categories.indexOf("TwnhsI");
 
 var HouseStyleMappings = {};
-HouseStyleMappings["One story"] = "1Story";
-HouseStyleMappings["One and one-half story: 2nd level finished"] = "1.5Fin";
-HouseStyleMappings["One and one-half story: 2nd level unfinished"] = "1.5Unf";
-HouseStyleMappings["Two story"] = "2Story";
-HouseStyleMappings["Two and one-half story: 2nd level finished"] = "2.5Fin";
-HouseStyleMappings["Two and one-half story: 2nd level unfinished"] = "2.5Unf";
-HouseStyleMappings["Split Foyer"] = "SFoyer";
-HouseStyleMappings["Split Level"] = "SLvl";
+HouseStyleMappings["One story"] = categories.indexOf("1Story");
+HouseStyleMappings["One and one-half story: 2nd level finished"] = categories.indexOf("1.5Fin");
+HouseStyleMappings["One and one-half story: 2nd level unfinished"] = categories.indexOf("1.5Unf");
+HouseStyleMappings["Two story"] = categories.indexOf("2Story");
+HouseStyleMappings["Two and one-half story: 2nd level finished"] = categories.indexOf("2.5Fin");
+HouseStyleMappings["Two and one-half story: 2nd level unfinished"] = categories.indexOf("2.5Unf");
+HouseStyleMappings["Split Foyer"] = categories.indexOf("SFoyer");
+HouseStyleMappings["Split Level"] = categories.indexOf("SLvl");
 
 var FoundationMappings = {};
-FoundationMappings["Brick & Tile"] = "BrkTil";
-FoundationMappings["Cinder Block"] = "CBlock";
-FoundationMappings["Poured Contrete"] = "PConc";
-FoundationMappings["Slab"] = "Slab";
-FoundationMappings["Stone"] = "Stone";
-FoundationMappings["Wood"] = "Wood";
+FoundationMappings["Brick & Tile"] = categories.indexOf("BrkTil");
+FoundationMappings["Cinder Block"] = categories.indexOf("CBlock");
+FoundationMappings["Poured Contrete"] = categories.indexOf("PConc");
+FoundationMappings["Slab"] = categories.indexOf("Slab");
+FoundationMappings["Stone"] = categories.indexOf("Stone");
+FoundationMappings["Wood"] = categories.indexOf("Wood");
 
 var KitchenQualMappings = {};
-KitchenQualMappings["Excellent"] = "Ex";
-KitchenQualMappings["Good"] = "Gd";
-KitchenQualMappings["Typical/Average"] = "TA";
-KitchenQualMappings["Fair"] = "Fa";
-KitchenQualMappings["Poor"] = "Po";
+KitchenQualMappings["Excellent"] = categories.indexOf("Ex");
+KitchenQualMappings["Good"] = categories.indexOf("Gd");
+KitchenQualMappings["Typical/Average"] = categories.indexOf("TA");
+KitchenQualMappings["Fair"] = categories.indexOf("Fa");
+KitchenQualMappings["Poor"] = categories.indexOf("Po");
 
 
 
