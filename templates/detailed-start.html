@@ -1,12 +1,242 @@
 <!doctype html>
 <head>
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/quick-start.css') }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--getmdl-select-->   
+  <link rel="stylesheet" href="https://cdn.rawgit.com/CreativeIT/getmdl-select/master/getmdl-select.min.css">
+  <script defer src="https://cdn.rawgit.com/CreativeIT/getmdl-select/master/getmdl-select.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/get_input.js') }}"></script>
   <title>TEST</title>
 </head>
 <body>
-  Detailed Start
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+      <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+      <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+      <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
+      <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+      <div class="page-content">
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="mszoning" value="Agriculture" readonly tabIndex="-1">
+            <label for="mszoning" class="mdl-textfield__label">Zoning Classification</label>
+            <ul for="mszoning" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Agriculture</li>
+                <li class="mdl-menu__item">Commercial</li>
+                <li class="mdl-menu__item">Floating Village Residential</li>
+                <li class="mdl-menu__item">Industrial</li>
+                <li class="mdl-menu__item">Residential High Density</li>
+                <li class="mdl-menu__item">Residential Low Density</li>
+                <li class="mdl-menu__item">Residential Low Density Park</li>
+                <li class="mdl-menu__item">Residential Medium Density</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="street" value="Gravel" readonly tabIndex="-1">
+            <label for="street" class="mdl-textfield__label">Type of Road Access</label>
+            <ul for="street" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Gravel</li>
+                <li class="mdl-menu__item">Paved</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="landcontour" value="Banked" readonly tabIndex="-1">
+            <label for="landcontour" class="mdl-textfield__label">Flatness of the Property</label>
+            <ul for="landcontour" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Near Flat/Level</li>
+                <li class="mdl-menu__item">Banked</li>
+                <li class="mdl-menu__item">Hillside</li>
+                <li class="mdl-menu__item">Depression</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="neighborhood" value="Bluestem" readonly tabIndex="-1">
+            <label for="neighborhood" class="mdl-textfield__label">Neighborhood</label>
+            <ul for="neighborhood" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Bloomington Heights</li>
+                <li class="mdl-menu__item">Bluestem</li>
+                <li class="mdl-menu__item">Briardale</li>
+                <li class="mdl-menu__item">Brookside</li>
+                <li class="mdl-menu__item">Clear Creek</li>
+                <li class="mdl-menu__item">College Creek</li>
+                <li class="mdl-menu__item">Crawford</li>
+                <li class="mdl-menu__item">Edwards</li>
+                <li class="mdl-menu__item">Gilbert</li>
+                <li class="mdl-menu__item">Iowa DOT and Rail Road</li>
+                <li class="mdl-menu__item">Meadow Village</li>
+                <li class="mdl-menu__item">Mitchell</li>
+                <li class="mdl-menu__item">North Ames</li>
+                <li class="mdl-menu__item">Northridge</li>
+                <li class="mdl-menu__item">Northpark Villa</li>
+                <li class="mdl-menu__item">Northridge Heights</li>
+                <li class="mdl-menu__item">Northwest Ames</li>
+                <li class="mdl-menu__item">Old Town</li>
+                <li class="mdl-menu__item">South & West of Iowa State University</li>
+                <li class="mdl-menu__item">Sawyer</li>
+                <li class="mdl-menu__item">Sawyer West</li>
+                <li class="mdl-menu__item">Somerset</li>
+                <li class="mdl-menu__item">Stone Brook</li>
+                <li class="mdl-menu__item">Timberland</li>
+                <li class="mdl-menu__item">Veenker</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="bldgtype" value="Single-family Detached" readonly tabIndex="-1">
+            <label for="bldgtype" class="mdl-textfield__label">Building Type</label>
+            <ul for="bldgtype" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Single-family Detached</li>
+                <li class="mdl-menu__item">Two-family Conversion</li>
+                <li class="mdl-menu__item">Duplex</li>
+                <li class="mdl-menu__item">Townhouse End Unit</li>
+                <li class="mdl-menu__item">Townhouse Inside Unit</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="housestyle" value="One story" readonly tabIndex="-1">
+            <label for="housestyle" class="mdl-textfield__label">House Style</label>
+            <ul for="housestyle" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">One story</li>
+                <li class="mdl-menu__item">One and one-half story: 2nd level finished</li>
+                <li class="mdl-menu__item">One and one-half story: 2nd level unfinished</li>
+                <li class="mdl-menu__item">Two story</li>
+                <li class="mdl-menu__item">Two and one-half story: 2nd level finished</li>
+                <li class="mdl-menu__item">Two and one-half story: 2nd level unfinished</li>
+                <li class="mdl-menu__item">Split Foyer</li>
+                <li class="mdl-menu__item">Split Level</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="foundation" value="Brick & Tile" readonly tabIndex="-1">
+            <label for="foundation" class="mdl-textfield__label">Type of Foundation</label>
+            <ul for="foundation" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Brick & Tile</li>
+                <li class="mdl-menu__item">Cinder Block</li>
+                <li class="mdl-menu__item">Poured Contrete</li>
+                <li class="mdl-menu__item">Slab</li>
+                <li class="mdl-menu__item">Stone</li>
+                <li class="mdl-menu__item">Wood</li>
+            </ul>
+        </div>
+
+        <!-- Simple Select -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+            <input class="mdl-textfield__input" type="text" id="kitchenqual" value="Excellent" readonly tabIndex="-1">
+            <label for="kitchenqual" class="mdl-textfield__label">Kitchen Quality</label>
+            <ul for="kitchenqual" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item">Excellent</li>
+                <li class="mdl-menu__item">Good</li>
+                <li class="mdl-menu__item">Typical/Average</li>
+                <li class="mdl-menu__item">Fair</li>
+                <li class="mdl-menu__item">Poor</li>
+            </ul>
+        </div>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="overallqual">
+            <label class="mdl-textfield__label" for="overallqual">Overall Quality of House (1-10)</label>
+          </div>
+        </form>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="yearbuilt">
+            <label class="mdl-textfield__label" for="yearbuilt">Year Built</label>
+          </div>
+        </form>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="remodel">
+            <label class="mdl-textfield__label" for="remodel">Remodel Date</label>
+          </div>
+        </form>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="flooronesf">
+            <label class="mdl-textfield__label" for="flooronesf">First Floor Square Footage</label>
+          </div>
+        </form>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="grarea">
+            <label class="mdl-textfield__label" for="grarea">Above Grade Living Area</label>
+          </div>
+        </form>
+
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="garagesize">
+            <label class="mdl-textfield__label" for="garagesize">Garage Size (# of cars)</label>
+          </div>
+        </form>
+
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+
+<!-- Colored raised button -->
+<button onclick="getQuickInput()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
+Generate Estimate
+</button>
+
+</div>
+
+</button>
 </body>
 </html>

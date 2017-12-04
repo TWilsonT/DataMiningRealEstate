@@ -2,7 +2,6 @@
 
 categories = ['', '1.5Fin', '1.5Unf', '1Fam', '1Story', '2.5Fin', '2.5Unf', '2Story', '2Types', '2fmCon', 'A', 'ALQ', 'Abnorml', 'AdjLand', 'AllPub', 'Alloca', 'Artery', 'AsbShng', 'AsphShn', 'Attchd', 'Av', 'BLQ', 'Basment', 'Blmngtn', 'Blueste', 'Bnk', 'BrDale', 'Brk Cmn', 'BrkCmn', 'BrkComm', 'BrkFace', 'BrkSide', 'BrkTil', 'BuiltIn', 'C', 'CBlock', 'COD', 'CWD', 'CarPort', 'CemntBd', 'ClearCr', 'ClyTile', 'CmentBd', 'CollgCr', 'CompShg', 'Con', 'ConLD', 'ConLI', 'ConLw', 'Corner', 'Crawfor', 'CulDSac', 'Detchd', 'Duplex', 'Edwards', 'Elev', 'Ex', 'FR2', 'FR3', 'FV', 'Fa', 'Family', 'Feedr', 'Fin', 'Flat', 'Floor', 'FuseA', 'FuseF', 'FuseP', 'GLQ', 'Gable', 'Gambrel', 'Gar2', 'GasA', 'GasW', 'Gd', 'GdPrv', 'GdWo', 'Gilbert', 'Grav', 'Greens', 'GrnHill', 'Grvl', 'Gtl', 'HLS', 'HdBoard', 'Hip', 'I', 'IDOTRR', 'IR1', 'IR2', 'IR3', 'ImStucc', 'Inside', 'Landmrk', 'Low', 'Lvl', 'LwQ', 'Maj1', 'Maj2', 'Mansard', 'MeadowV', 'Membran', 'Metal', 'MetalSd', 'Min1', 'Min2', 'Mitchel', 'Mix', 'Mn', 'MnPrv', 'MnWw', 'Mod', 'N', 'NA', 'NAmes', 'NPkVill', 'NWAmes', 'New', 'No', 'NoRidge', 'NoSeWa', 'NoSewr', 'None', 'Norm', 'Normal', 'NridgHt', 'OldTown', 'Oth', 'OthW', 'Other', 'Othr', 'P', 'PConc', 'Partial', 'Pave', 'Plywood', 'Po', 'PosA', 'PosN', 'PreCast', 'RFn', 'RH', 'RL', 'RM', 'RRAe', 'RRAn', 'RRNe', 'RRNn', 'Rec', 'Reg', 'Roll', 'SBrkr', 'SFoyer', 'SLvl', 'SWISU', 'Sal', 'Sawyer', 'SawyerW', 'Sev', 'Shed', 'Slab', 'Somerst', 'Stone', 'StoneBr', 'Stucco', 'TA', 'Tar&Grv', 'TenC', 'Timber', 'Twnhs', 'TwnhsE', 'Typ', 'Unf', 'VWD', 'Veenker', 'VinylSd', 'WD ', 'Wall', 'Wd Sdng', 'Wd Shng', 'WdShake', 'WdShing', 'WdShngl', 'Wood', 'Y']
 
-console.log(categories.indexOf("2fmCon"))
 var MSZoningMappings = {};
 MSZoningMappings["Agriculture"] = categories.indexOf("A");
 MSZoningMappings["Commercial"] = categories.indexOf("C");
@@ -96,12 +95,12 @@ function getQuickInput(){
 	KitchenQual = document.getElementById('kitchenqual').value;
 
 	// numerical attributes
-	OverallQual = document.getElementById('overallqual').value;
-	YearBuilt = document.getElementById('yearbuilt').value;
-	YearRemodAdd = document.getElementById('remodel').value;
-	FirstFlrSF = document.getElementById('flooronesf').value; // 1stFlrSF
-	GrLivArea = document.getElementById('grarea').value;
-	GarageCars = document.getElementById('garagesize').value;
+	OverallQual = document.getElementById('overallqual').value || 1;
+	YearBuilt = document.getElementById('yearbuilt').value || 1900;
+	YearRemodAdd = document.getElementById('remodel').value || 1900;
+	FirstFlrSF = document.getElementById('flooronesf').value || 0; // 1stFlrSF
+	GrLivArea = document.getElementById('grarea').value || 0;
+	GarageCars = document.getElementById('garagesize').value || 0;
 
 
 	var data = [
@@ -133,4 +132,10 @@ function getQuickInput(){
 		  },
 		  dataType: "json"
 	});
+}
+
+function redirectPage(){
+	var timer = setTimeout(function() {
+        window.location='final-estimate'
+    }, 3000);
 }
