@@ -8,8 +8,32 @@
 </head>
 <body>
   <div id="wrapper">
-    <div id="nav-header">{{ value }}</div>
     
+	<header class="mdl-layout__header">
+         <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Home Value Estimator</span>
+         </div>
+        </header>	
+	
+    <div class="card-wrapper" id="left-card-wrapper">
+
+      <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title" id="left-title">
+          <div id="left-title-image"></div>
+          <h2 class="mdl-card__title-text">Estimated Value</a></h2>
+        </div>
+        <div class="mdl-card__supporting-text">The estimated value of your house is $
+	<script>
+		 document.write({{ value }})
+	</script> 
+	</div>        
+      </div>
+
+    </div>
+
+    
+
   </div>
 </body>
 </html>

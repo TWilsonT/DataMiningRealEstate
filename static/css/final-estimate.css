@@ -17,3 +17,57 @@ html {
 	width: 100%;
 	background-color: pink;
 }
+
+.card-wrapper {
+	padding-top: 5%;
+	width: 100%;
+	height: 70%;
+}
+
+#left-card-wrapper {
+	padding-left: 10%;
+	max-width: 1025px;
+	float: left;
+
+}
+
+#right-card-wrapper {
+	padding-right: 5%;
+	float: right;
+}
+
+/* MDL Stuff */
+.mdl-card {
+	min-width: 85%;
+	height: 80%;
+}
+.mdl-card__title {
+	height: 80%;
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#left-title-image {
+	width: 80%;
+	height: 100%;
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-image: url('/static/img/dollar_sign.png');
+}
+
+#left-title {
+	background-color: #AAACB5;
+}
+
+#right-title-image {
+	width: 80%;
+	height: 70%;
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-image: url('/static/img/dollar_sign.png');
+}
+
+#right-title {
+	background-color: #A15E49;
+	height: 80%
+}

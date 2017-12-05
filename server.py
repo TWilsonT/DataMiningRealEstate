@@ -5,6 +5,7 @@ import random, json
 import pickle
 
 from sklearn.tree import DecisionTreeRegressor
+import numpy as np
 
 
 app = Flask(__name__)
@@ -36,7 +37,7 @@ def detailedStart():
 @app.route('/final-estimate')
 def finalEstimate():
     # serve index template
-    return render_template('final-estimate.html', value=session['value'])
+    return render_template('final-estimate.html', value=str(session['value']))
 
 
 @app.route('/receiver', methods = ['POST'])
@@ -53,8 +54,10 @@ def worker():
         	input.append(d[i])
 
     print(input)
+    
 
-    val = regressor.predict(input)
+
+    val = regressor.predict(np.array(input).reshape(1,-1))
     session['value'] = str(val)
     return result
 
